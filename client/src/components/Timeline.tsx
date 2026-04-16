@@ -111,7 +111,7 @@ export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }
                             {expandedChapters.has(chapter.id) && (
                               <div className="mt-2 ml-2 space-y-1 border-l-2 border-primary/30 pl-2">
                                 {chapter.keyEvents.map((event, idx) => (
-                                  <button
+                                  <div
                                     key={idx}
                                     onClick={(e) => {
                                       e.stopPropagation();
@@ -125,10 +125,10 @@ export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }
                                         }, 2000);
                                       }
                                     }}
-                                    className="w-full text-left text-xs p-1.5 bg-primary/5 rounded hover:bg-primary/15 transition-all text-foreground hover:text-primary"
+                                    className="w-full text-left text-xs p-1.5 bg-primary/5 rounded hover:bg-primary/15 transition-all text-foreground hover:text-primary cursor-pointer"
                                   >
                                     ▸ {event}
-                                  </button>
+                                  </div>
                                 ))}
                               </div>
                             )}
