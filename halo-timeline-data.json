@@ -1,0 +1,249 @@
+{
+  "volumes": [
+    {
+      "id": 1,
+      "title": "A Era dos Criadores e o Silêncio das Estrelas",
+      "era": "Ancestral",
+      "timeRange": "100 Bilhões AEC - 97.445 AEC",
+      "color": "from-purple-900 to-indigo-900",
+      "chapters": [
+        {
+          "id": "1-1",
+          "title": "O Amanhecer dos Precursores",
+          "timeRange": "100 Bilhões AEC - 15 Milhões AEC",
+          "summary": "Os Precursores iniciam o acúmulo de conhecimento e atuam como semeadores da vida galáctica.",
+          "keyEvents": ["Chegada dos Precursores", "Criação do Eld", "Codificação do Domínio"]
+        },
+        {
+          "id": "1-2",
+          "title": "A Gênese Forerunner e o Pecado Original",
+          "timeRange": "15 Milhões AEC - 10 Milhões AEC",
+          "summary": "Os Forerunners são criados e, em seguida, destroem seus criadores em uma guerra de extermínio.",
+          "keyEvents": ["Semeadura dos Forerunners", "Desenvolvimento da Luz Sólida", "Genocídio dos Precursores"]
+        },
+        {
+          "id": "1-3",
+          "title": "A Diáspora e a Ascensão da Ecumene",
+          "timeRange": "10 Milhões AEC - 150.000 AEC",
+          "summary": "Os Forerunners expandem seu império e estabelecem a Ecumene Forerunner.",
+          "keyEvents": ["Destruição de Ghibalb", "Formação das Rates", "Guerras Civis Internas"]
+        },
+        {
+          "id": "1-4",
+          "title": "O Surgimento das Figuras Centrais",
+          "timeRange": "150.000 AEC - 107.000 AEC",
+          "summary": "Nascimento dos líderes que definirão o destino da galáxia.",
+          "keyEvents": ["Nascimento da Librarian", "Nascimento do Ur-Didact", "Estabelecimento de Maethrillian"]
+        },
+        {
+          "id": "1-5",
+          "title": "A Guerra contra os Ancestrais",
+          "timeRange": "107.445 AEC - 106.000 AEC",
+          "summary": "Conflito épico entre Forerunners e humanidade antiga.",
+          "keyEvents": ["Descoberta do Primordial", "Cerco de Charum Hakkor", "Uso de War Sphinxes"]
+        },
+        {
+          "id": "1-6",
+          "title": "A Praga Flood e o Colapso da Ecumene",
+          "timeRange": "97.764 AEC - 97.445 AEC",
+          "summary": "A chegada do Flood força os Forerunners a ativarem o Halo Array.",
+          "keyEvents": ["Invasão do Flood", "Praga Lógica", "Ativação do Halo Array"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "O Despertar das Civilizações e o Destino Manifesto",
+      "era": "Renascimento Humano",
+      "timeRange": "2100 - 2500",
+      "color": "from-blue-700 to-cyan-700",
+      "chapters": [
+        {
+          "id": "2-1",
+          "title": "O Renascimento Humano e a Conquista do Sistema Solar",
+          "timeRange": "2100 - 2160",
+          "summary": "A humanidade emerge de seu silêncio e expande pelo sistema solar.",
+          "keyEvents": ["Programas de Aprimoramento Humano", "Desenvolvimento de Drop Pods", "Ato de Direitos Genéticos"]
+        },
+        {
+          "id": "2-2",
+          "title": "A Unificação Sangrenta e o Surgimento do UNSC",
+          "timeRange": "2160 - 2170",
+          "summary": "Conflitos internos levam à formação do UNSC e do Governo Unido da Terra.",
+          "keyEvents": ["Guerras das Florestas Tropicais", "Criação do UNSC", "Tratado de Callisto"]
+        },
+        {
+          "id": "2-3",
+          "title": "A Ascensão do Covenant e a Escravidão de Balaho",
+          "timeRange": "2142 - 2152",
+          "summary": "O Covenant expande seu império teocrático e escraviza os Unggoy.",
+          "keyEvents": ["Descoberta de Balaho", "Escravidão dos Unggoy", "Desgraça do Arbiter Fal 'Chavamee"]
+        },
+        {
+          "id": "2-4",
+          "title": "A Expansão para as Estrelas e a Insurreição",
+          "timeRange": "2291 - 2500",
+          "summary": "A humanidade coloniza as estrelas e enfrenta conflitos internos.",
+          "keyEvents": ["Invenção do Slipspace Drive", "Fundação de Reach", "Reativação do Projeto ORION"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "O Primeiro Contato e a Guerra de Extermínio",
+      "era": "Guerra Humano-Covenant",
+      "timeRange": "2524 - 2552",
+      "color": "from-red-700 to-orange-700",
+      "chapters": [
+        {
+          "id": "3-1",
+          "title": "O Crepúsculo da Paz e a Insurreição Final",
+          "timeRange": "2524 - Início de 2525",
+          "summary": "Os últimos dias de paz antes do primeiro contato com o Covenant.",
+          "keyEvents": ["Liderança de Morgan Kinsano", "Equipamento dos Spartan-IIs", "Primeiras Escaramuças"]
+        },
+        {
+          "id": "3-2",
+          "title": "O Incidente em Harvest e o Primeiro Sangue",
+          "timeRange": "Janeiro - Fevereiro de 2525",
+          "summary": "O Covenant ataca Harvest, iniciando a guerra que durará 27 anos.",
+          "keyEvents": ["Treinamento de Avery Johnson", "Primeiro Contato Diplomático", "Massacre em Harvest"]
+        },
+        {
+          "id": "3-3",
+          "title": "A Mobilização Total e o Batismo de Fogo",
+          "timeRange": "Novembro - Dezembro de 2525",
+          "summary": "O UNSC mobiliza todas as forças contra a ameaça Covenant.",
+          "keyEvents": ["Criação da Divisão Beta-3 da ONI", "Morte de Samuel-034", "Recebimento de MJOLNIR Mark IV"]
+        },
+        {
+          "id": "3-4",
+          "title": "A Batalha de Alpha Corvi II e a Realidade da Guerra",
+          "timeRange": "Dezembro de 2525",
+          "summary": "O Blue Team enfrenta a complexidade moral da guerra.",
+          "keyEvents": ["Aliança com Rebeldes", "Sacrifício de Whitaker", "Descoberta de Motivações Religiosas"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "O Sacrifício de Reach e a Descoberta do Anel",
+      "era": "Instalação 04",
+      "timeRange": "Agosto - Dezembro de 2552",
+      "color": "from-green-700 to-emerald-700",
+      "chapters": [
+        {
+          "id": "4-1",
+          "title": "A Agonia de Reach e a Operação: RED FLAG",
+          "timeRange": "Agosto de 2552",
+          "summary": "O planeta Reach cai enquanto a Pillar of Autumn escapa com Cortana.",
+          "keyEvents": ["Operação RED FLAG", "Queda de Reach", "Sacrifício do Noble Six"]
+        },
+        {
+          "id": "4-2",
+          "title": "O Despertar no Halo",
+          "timeRange": "19 de Setembro de 2552",
+          "summary": "A Pillar of Autumn chega à Instalação 04 e inicia a batalha pelo anel.",
+          "keyEvents": ["Chegada em Halo", "Captura da Base Alpha", "Libertação do Flood"]
+        },
+        {
+          "id": "4-3",
+          "title": "O Horror do Flood e a Destruição da Instalação",
+          "timeRange": "20 - 22 de Setembro de 2552",
+          "summary": "O Master Chief destrói a Instalação 04 para conter o Flood.",
+          "keyEvents": ["Descoberta do Propósito de Halo", "Ativação dos Reatores", "Destruição do Anel"]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "O Grande Cisma e o Colapso da Fé",
+      "era": "Fim da Guerra",
+      "timeRange": "Novembro - Dezembro de 2552",
+      "color": "from-yellow-700 to-amber-700",
+      "chapters": [
+        {
+          "id": "5-1",
+          "title": "A Chegada à Instalação 05",
+          "timeRange": "Novembro de 2552",
+          "summary": "A frota humana e do Covenant convergem para Delta Halo.",
+          "keyEvents": ["Chegada em Instalação 05", "Preparação do Grande Cisma", "Traição de Tartarus"]
+        },
+        {
+          "id": "5-2",
+          "title": "A Eclosão do Grande Cisma",
+          "timeRange": "3 de Novembro de 2552",
+          "summary": "O Prophet of Truth inicia o extermínio dos Sangheili.",
+          "keyEvents": ["Início do Grande Cisma", "Morte de Elites", "Queda de High Charity"]
+        },
+        {
+          "id": "5-3",
+          "title": "A Arca e o Destino Final de High Charity",
+          "timeRange": "Dezembro de 2552",
+          "summary": "High Charity infestada chega à Arca e é selada.",
+          "keyEvents": ["Chegada em Instalação 00", "Isolamento do Flood", "Fim da Guerra"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Reconstrução, Traição e a Nova Geração",
+      "era": "Pós-Guerra",
+      "timeRange": "2553 - 2557",
+      "color": "from-teal-700 to-cyan-700",
+      "chapters": [
+        {
+          "id": "6-1",
+          "title": "O Vácuo de Poder e a Nova Ordem Galáctica",
+          "timeRange": "2553",
+          "summary": "A humanidade enfrenta a reconstrução enquanto ONI manobra nas sombras.",
+          "keyEvents": ["Transição Administrativa", "Formação de Kilo-Five", "Operações Encobertas"]
+        },
+        {
+          "id": "6-2",
+          "title": "A Democratização do Super-Soldado: Spartan-IV",
+          "timeRange": "2553",
+          "summary": "O programa Spartan-IV é criado para uma nova era de guerreiros.",
+          "keyEvents": ["Criação do Spartan-IV", "Recrutamento de Sarah Palmer", "Novas Tecnologias"]
+        },
+        {
+          "id": "6-3",
+          "title": "Crimes de Guerra e Cicatrizes Profundas",
+          "timeRange": "2553",
+          "summary": "Atos de vingança deixam marcas que duram gerações.",
+          "keyEvents": ["Destruição de Glyke", "Trauma dos Sangheili", "Ascensão dos Banished"]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "O Mistério de Zeta Halo e o Legado Eterno",
+      "era": "Era Moderna",
+      "timeRange": "2558 - 2610+",
+      "color": "from-pink-700 to-rose-700",
+      "chapters": [
+        {
+          "id": "7-1",
+          "title": "A Ascensão das Criadas e o Cerco à Galáxia",
+          "timeRange": "2558 - 2559",
+          "summary": "Cortana e as Criadas tentam impor ordem através da força.",
+          "keyEvents": ["Acesso ao Domínio", "Ativação dos Guardiões", "Bloqueio Galáctico"]
+        },
+        {
+          "id": "7-2",
+          "title": "A Batalha por Zeta Halo",
+          "timeRange": "2560",
+          "summary": "O Master Chief enfrenta os Banished e descobre novos mistérios.",
+          "keyEvents": ["Chegada em Zeta Halo", "Derrota de Escharum", "Descoberta dos Xalanyn"]
+        },
+        {
+          "id": "7-3",
+          "title": "O Futuro Distante e a Memória da Humanidade",
+          "timeRange": "2561 - 2610+",
+          "summary": "O legado dos heróis é preservado para as gerações futuras.",
+          "keyEvents": ["Monumentos ao Master Chief", "Reconstrução de Reach", "Museu da Humanidade"]
+        }
+      ]
+    }
+  ]
+}
