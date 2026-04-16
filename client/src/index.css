@@ -141,6 +141,10 @@
 }
 
 @layer components {
+  .highlight-event {
+    @apply ring-2 ring-primary bg-primary/20 shadow-[0_0_15px_rgba(99,102,241,0.4)];
+  }
+
   /**
    * Custom container utility that centers content and adds responsive padding.
    *

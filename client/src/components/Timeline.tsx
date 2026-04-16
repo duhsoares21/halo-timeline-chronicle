@@ -10,9 +10,20 @@ interface TimelineProps {
 
 export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }: TimelineProps) {
   const [expandedVolume, setExpandedVolume] = useState<number | null>(null);
+  const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
 
   const toggleVolume = (volumeId: number) => {
     setExpandedVolume(expandedVolume === volumeId ? null : volumeId);
+  };
+
+  const toggleChapter = (chapterId: string) => {
+    const newSet = new Set(expandedChapters);
+    if (newSet.has(chapterId)) {
+      newSet.delete(chapterId);
+    } else {
+      newSet.add(chapterId);
+    }
+    setExpandedChapters(newSet);
   };
 
   // Filtrar volumes baseado na era selecionada
@@ -22,7 +33,7 @@ export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }
 
   return (
     <div className="w-full py-8">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold glow-text mb-12 text-center">
           A Linha do Tempo do Universo Halo
         </h2>
@@ -70,24 +81,60 @@ export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }
                         {volume.timeRange}
                       </p>
 
-                      {/* Capítulos expandidos */}
-                      {expandedVolume === volume.id && (
-                        <div className="mt-4 pt-4 border-t border-primary/20 space-y-2">
-                          {volume.chapters.map((chapter: Chapter) => (
-                            <div
-                              key={chapter.id}
-                              className="text-xs bg-primary/10 p-2 rounded border border-primary/20"
+                      {/* Capítulos e Eventos - Sempre Visíveis */}
+                      <div className="mt-4 pt-4 border-t border-primary/20 space-y-3 max-h-96 overflow-y-auto">
+                        {volume.chapters.map((chapter: Chapter) => (
+                          <div key={chapter.id}>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleChapter(chapter.id);
+                              }}
+                              className="w-full text-left flex items-start gap-2 p-2 bg-primary/10 rounded border border-primary/20 hover:bg-primary/20 transition-all"
                             >
-                              <p className="font-semibold text-primary">
-                                {chapter.title}
-                              </p>
-                              <p className="text-muted-foreground text-xs mt-1">
-                                {chapter.timeRange}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                              <div className="flex-1">
+                                <p className="text-xs font-semibold text-primary">
+                                  {chapter.title}
+                                </p>
+                                <p className="text-xs text-muted-foreground">
+                                  {chapter.timeRange}
+                                </p>
+                              </div>
+                              {expandedChapters.has(chapter.id) ? (
+                                <ChevronUp className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                              ) : (
+                                <ChevronDown className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                              )}
+                            </button>
+
+                            {/* Eventos do Capítulo */}
+                            {expandedChapters.has(chapter.id) && (
+                              <div className="mt-2 ml-2 space-y-1 border-l-2 border-primary/30 pl-2">
+                                {chapter.keyEvents.map((event, idx) => (
+                                  <button
+                                    key={idx}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      // Scroll para a narrativa correspondente
+                                      const eventElement = document.getElementById(`event-${chapter.id}-${idx}`);
+                                      if (eventElement) {
+                                        eventElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                        eventElement.classList.add('highlight-event');
+                                        setTimeout(() => {
+                                          eventElement.classList.remove('highlight-event');
+                                        }, 2000);
+                                      }
+                                    }}
+                                    className="w-full text-left text-xs p-1.5 bg-primary/5 rounded hover:bg-primary/15 transition-all text-foreground hover:text-primary"
+                                  >
+                                    ▸ {event}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </button>
                   </div>
 

@@ -1,6 +1,7 @@
 import { useLocation } from 'wouter';
-import { ArrowLeft, Zap } from 'lucide-react';
+import { ArrowLeft, Zap, ExternalLink } from 'lucide-react';
 import { timelineData, type Volume } from '@/lib/timelineData';
+import { getHalopediaLink } from '@/lib/eventLinks';
 
 // Design: Página de listagem de eventos
 // Cores: Tema sci-fi futurista com azul/ciano primário
@@ -36,7 +37,7 @@ export default function Events() {
           <div>
             <h1 className="text-3xl font-bold glow-text">Todos os Eventos</h1>
             <p className="text-sm text-muted-foreground">
-              {allEvents.length}+ eventos históricos verificados
+              {allEvents.length} marcos históricos principais verificados
             </p>
           </div>
         </div>
@@ -59,15 +60,31 @@ export default function Events() {
                   <div key={chapter.id} className="border-l-2 border-primary/50 pl-4">
                     <h3 className="font-bold text-primary mb-3">{chapter.title}</h3>
                     <div className="space-y-2">
-                      {chapter.keyEvents.map((event, idx) => (
-                        <div
-                          key={idx}
-                          className="sci-fi-card p-3 flex items-start gap-3 transition-all hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
-                        >
-                          <Zap className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                          <p className="text-sm text-foreground">{event}</p>
-                        </div>
-                      ))}
+                      {chapter.keyEvents.map((event, idx) => {
+                        const halopediaLink = getHalopediaLink(event);
+                        return (
+                          <div
+                            key={idx}
+                            className="sci-fi-card p-3 flex items-start gap-3 transition-all hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
+                          >
+                            <Zap className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <div className="flex-1 flex items-center justify-between gap-2">
+                              <p className="text-sm text-foreground">{event}</p>
+                              {halopediaLink && (
+                                <a
+                                  href={halopediaLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-primary hover:text-primary/80 transition-colors flex-shrink-0"
+                                  title="Abrir na Halopedia"
+                                >
+                                  <ExternalLink className="w-4 h-4" />
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
@@ -84,7 +101,10 @@ export default function Events() {
       {/* Footer */}
       <footer className="border-t border-primary/20 py-8 px-4 mt-12">
         <div className="max-w-6xl mx-auto text-center text-sm text-muted-foreground">
-          <p>Crônica do Universo Halo • {allEvents.length}+ Eventos Históricos</p>
+          <p>Crônica do Universo Halo • {allEvents.length} Marcos Históricos Principais</p>
+          <p className="mt-2 text-xs text-primary/70">
+            Clique no ícone <ExternalLink className="w-3 h-3 inline" /> para abrir na Halopedia
+          </p>
         </div>
       </footer>
     </div>

@@ -26,8 +26,8 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl font-bold glow-text mb-2">
             A Crônica Universal de Halo
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Uma narrativa épica baseada em 4.000 eventos históricos do universo Halo
+            <p className="text-lg text-muted-foreground">
+            Uma narrativa épica baseada em 78 marcos históricos principais do universo Halo
           </p>
         </div>
       </header>
@@ -38,7 +38,7 @@ export default function Home() {
           <div className="sci-fi-card p-8">
             <p className="text-foreground leading-relaxed mb-4">
               Desde o acúmulo de conhecimento dos Precursores há cem bilhões de anos até os monumentos erguidos no século XXVII, 
-              esta crônica documenta a história completa do universo Halo. Navegue pela linha do tempo interativa abaixo para explorar 
+              esta crônica documenta a história completa do universo Halo através de 78 marcos históricos principais. Navegue pela linha do tempo interativa abaixo para explorar 
               cada era, capítulo e evento que moldou a galáxia.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -62,8 +62,8 @@ export default function Home() {
                 onClick={() => setLocation('/events')}
                 className="bg-primary/10 border border-primary/20 p-4 rounded hover:bg-primary/20 hover:border-primary/40 transition-all cursor-pointer text-left"
               >
-                <p className="text-xs text-primary font-semibold mb-1">4.000+ EVENTOS</p>
-                <p className="text-sm text-foreground">Fatos verificados</p>
+                <p className="text-xs text-primary font-semibold mb-1">78 EVENTOS</p>
+                <p className="text-sm text-foreground">Marcos históricos principais</p>
                 <p className="text-xs text-primary/60 mt-2">Explorar →</p>
               </button>
             </div>
@@ -137,7 +137,7 @@ export default function Home() {
       <footer className="border-t border-primary/20 py-8 px-4 mt-12">
         <div className="max-w-6xl mx-auto text-center text-sm text-muted-foreground">
           <p>
-            Crônica do Universo Halo • Baseada em dados da Halopedia e 4.000 registros históricos
+            Crônica do Universo Halo • Baseada em dados da Halopedia e 78 marcos históricos principais
           </p>
           <p className="mt-4 text-xs text-primary/70">
             Design Sci-Fi Futurista • Timeline Interativa • Narrativas Épicas • Leitura em Voz
