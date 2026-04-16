@@ -85,12 +85,12 @@ export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }
                       <div className="mt-4 pt-4 border-t border-primary/20 space-y-3 max-h-96 overflow-y-auto">
                         {volume.chapters.map((chapter: Chapter) => (
                           <div key={chapter.id}>
-                            <button
+                            <div
                               onClick={(e) => {
                                 e.stopPropagation();
                                 toggleChapter(chapter.id);
                               }}
-                              className="w-full text-left flex items-start gap-2 p-2 bg-primary/10 rounded border border-primary/20 hover:bg-primary/20 transition-all"
+                              className="w-full text-left flex items-start gap-2 p-2 bg-primary/10 rounded border border-primary/20 hover:bg-primary/20 transition-all cursor-pointer"
                             >
                               <div className="flex-1">
                                 <p className="text-xs font-semibold text-primary">
@@ -105,7 +105,7 @@ export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }
                               ) : (
                                 <ChevronDown className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                               )}
-                            </button>
+                            </div>
 
                             {/* Eventos do Capítulo */}
                             {expandedChapters.has(chapter.id) && (
