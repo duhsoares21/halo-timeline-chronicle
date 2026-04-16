@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build --outdir=dist",
-    "start": "NODE_ENV=production node dist/index.js",
+    "build": "vite build",
+    "start": "NODE_ENV=production npm run start",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
