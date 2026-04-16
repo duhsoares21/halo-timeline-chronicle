@@ -66,6 +66,7 @@ export default function Home() {
         <Timeline 
           onVolumeSelect={setSelectedVolume}
           selectedVolume={selectedVolume}
+          selectedEra={selectedEra}
         />
       </section>
 

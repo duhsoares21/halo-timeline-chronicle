@@ -5,14 +5,20 @@ import { timelineData, type Volume, type Chapter } from '@/lib/timelineData';
 interface TimelineProps {
   onVolumeSelect: (volumeId: number) => void;
   selectedVolume: number | null;
+  selectedEra: string | null;
 }
 
-export default function Timeline({ onVolumeSelect, selectedVolume }: TimelineProps) {
+export default function Timeline({ onVolumeSelect, selectedVolume, selectedEra }: TimelineProps) {
   const [expandedVolume, setExpandedVolume] = useState<number | null>(null);
 
   const toggleVolume = (volumeId: number) => {
     setExpandedVolume(expandedVolume === volumeId ? null : volumeId);
   };
+
+  // Filtrar volumes baseado na era selecionada
+  const filteredVolumes = timelineData.volumes.filter(
+    (volume: Volume) => selectedEra === null || volume.era === selectedEra
+  );
 
   return (
     <div className="w-full py-8">
@@ -23,11 +29,13 @@ export default function Timeline({ onVolumeSelect, selectedVolume }: TimelinePro
 
         <div className="relative">
           {/* Linha vertical central */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line" />
+          {filteredVolumes.length > 0 && (
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line" />
+          )}
 
           {/* Volumes */}
           <div className="space-y-8">
-            {timelineData.volumes.map((volume: Volume, index: number) => (
+            {filteredVolumes.map((volume: Volume, index: number) => (
               <div key={volume.id} className="relative">
                 {/* Alternância esquerda/direita */}
                 <div className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
@@ -65,7 +73,7 @@ export default function Timeline({ onVolumeSelect, selectedVolume }: TimelinePro
                       {/* Capítulos expandidos */}
                       {expandedVolume === volume.id && (
                         <div className="mt-4 pt-4 border-t border-primary/20 space-y-2">
-                            {volume.chapters.map((chapter: Chapter) => (
+                          {volume.chapters.map((chapter: Chapter) => (
                             <div
                               key={chapter.id}
                               className="text-xs bg-primary/10 p-2 rounded border border-primary/20"
@@ -91,6 +99,13 @@ export default function Timeline({ onVolumeSelect, selectedVolume }: TimelinePro
               </div>
             ))}
           </div>
+
+          {/* Mensagem quando nenhum volume é encontrado */}
+          {filteredVolumes.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">Nenhum volume encontrado para esta era.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
